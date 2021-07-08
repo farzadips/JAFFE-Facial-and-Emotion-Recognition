@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 from scipy.stats import norm
 
 
@@ -13,7 +14,7 @@ ang = ratings60['ANG']
 dis = ratings60['DIS']
 fea = ratings60['FEA']
 
-
+print(np.mean(hap), np.mean(sad), np.mean(sur), np.mean(ang), np.mean(dis), np.mean(fea))
 plt.figure(figsize=(10,10))
 emotion = fea
 sns.distplot(emotion, fit=norm)
